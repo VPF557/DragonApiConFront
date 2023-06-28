@@ -73,12 +73,12 @@ public class DataService {
 
         return listaTweets;
     }
-/*
-    public static ArrayList<Criptomoneda> eliminarTweet(Criptomoneda productoNuevo, ArrayList<Criptomoneda> listaTweets){
+
+    public static ArrayList<Parametro> eliminarTweet(Parametro productoNuevo, ArrayList<Parametro> listaTweets){
         Gson g = new Gson();
-        String urlPrefix = "http://localhost:8081/CriptoB?id=" + productoNuevo.getId();
+        String urlPrefix = "http://localhost:8081/ParamB?parameter1=" + productoNuevo.getParameter1();
         CloseableHttpClient httpClient = HttpClients.createDefault();
-        String datospasar = productoNuevo.mostrarJson();
+        String datospasar = productoNuevo.toString();
         StringEntity entidad = null;
         try {
             entidad = new StringEntity(datospasar);
@@ -88,7 +88,7 @@ public class DataService {
             CloseableHttpResponse response = null;
             response = httpClient.execute(requestpuesta);
             String respuestaActual = new BasicResponseHandler().handleResponse(response);
-            listaTweets = g.fromJson(respuestaActual, new TypeToken<ArrayList<Criptomoneda>>(){}.getType());
+            listaTweets = g.fromJson(respuestaActual, new TypeToken<ArrayList<Parametro>>(){}.getType());
         } catch (UnsupportedEncodingException e) {
             throw new RuntimeException(e);
         } catch (HttpResponseException e) {
@@ -101,5 +101,5 @@ public class DataService {
 
         return listaTweets;
     }
-*/
+
 }
