@@ -1,1 +1,1 @@
-# Version 0.1 con el back funcional
+# Version 1.0 todo funcional
