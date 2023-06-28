@@ -50,9 +50,9 @@ public class Controller {
     }
 
     @DeleteMapping("/Borrar{parameter2}")
-    public ArrayList<Parametro> borrarParam(@RequestParam String parametro2)
+    public ArrayList<Parametro> borrarParam(@RequestParam String parameter2)
     {
-        ArrayList<Parametro>  lista = data.buscarObjeto(parametro2,"Peticiones.json");
+        ArrayList<Parametro>  lista = data.buscarObjeto(parameter2,"Peticiones.json");
         EscribirJson escribirJSON = new EscribirJson();
         writter.escribirJsonPeticiones(lista);
 

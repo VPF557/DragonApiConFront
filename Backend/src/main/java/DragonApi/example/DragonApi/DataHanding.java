@@ -91,7 +91,7 @@ public class DataHanding {
         LeerJson reader = new LeerJson();
         ArrayList<Parametro> listaAux = reader.LeerFicheroPeticiones(ruta);
         for (int i = 0; i < listaAux.size(); i++) {
-            if (listaAux.get(i).getParameter1().equals(param2)) {
+            if (listaAux.get(i).getParameter2().equals(param2)) {
                 listaAux.remove(i);
             }
         }
