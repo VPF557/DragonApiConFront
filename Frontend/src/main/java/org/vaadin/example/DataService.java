@@ -74,9 +74,9 @@ public class DataService {
         return listaTweets;
     }
 
-    public static ArrayList<Parametro> eliminarTweet(Parametro productoNuevo, ArrayList<Parametro> listaTweets){
+    public static ArrayList<Parametro> eliminarParam(Parametro productoNuevo, ArrayList<Parametro> listaTweets){
         Gson g = new Gson();
-        String urlPrefix = "http://localhost:8081/ParamB?parameter1=" + productoNuevo.getParameter1();
+        String urlPrefix = "http://localhost:8081/Borrar?parameter2=" + productoNuevo.getParameter2();
         CloseableHttpClient httpClient = HttpClients.createDefault();
         String datospasar = productoNuevo.toString();
         StringEntity entidad = null;

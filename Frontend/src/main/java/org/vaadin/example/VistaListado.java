@@ -30,7 +30,7 @@ public class VistaListado extends VerticalLayout {
         menu.setOpenOnClick(true);
         menu.addItem("Delete", event ->
         {
-            grid.setItems(DataService.eliminarTweet(event.getItem().get(),listaAux));
+            grid.setItems(DataService.eliminarParam(event.getItem().get(),listaAux));
         });
         grid.setAllRowsVisible(true);
         this.add(grid);
