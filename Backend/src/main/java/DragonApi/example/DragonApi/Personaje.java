@@ -8,10 +8,12 @@ public class Personaje
     @JsonProperty
     private String name;
     @JsonProperty
-    private String origin;
-    @JsonProperty
-    private String species;
+    private String description;
 
+    public Personaje(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
     public Personaje() {
     }
 
@@ -23,20 +25,12 @@ public class Personaje
         this.name = name;
     }
 
-    public String getOrigin() {
-        return origin;
+    public String getDescription() {
+        return description;
     }
 
-    public void setOrigin(String origin) {
-        this.origin = origin;
-    }
-
-    public String getSpecies() {
-        return species;
-    }
-
-    public void setSpecies(String species) {
-        this.species = species;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String MostrarJson()

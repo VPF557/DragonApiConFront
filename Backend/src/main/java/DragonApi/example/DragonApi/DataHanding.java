@@ -70,7 +70,7 @@ public class DataHanding {
             String jsonData = response.body();
 
             Gson gson = new Gson();
-            tipo = gson.fromJson(jsonData, Fusion.class);
+            fusion = gson.fromJson(jsonData, Fusion.class);
 
         } catch (URISyntaxException e) {
             System.out.println("Error al crear la request: " + e.getMessage());

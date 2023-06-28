@@ -31,7 +31,7 @@ public class Controller {
         ArrayList<Parametro> listaPeticiones = reader.LeerFicheroPeticiones("Peticiones.json");
         ArrayList<Fusion> listaFusion = reader.LeerFicheroFusion("Fusiones.json");
 
-        if(objeto1.getParameter1().equals("type"))
+        if(objeto1.getParameter1().equals("fusion"))
         {
             Fusion fusion = new Fusion();
             fusion = data.obtenerFusion(objeto1);

@@ -8,17 +8,14 @@ public class Fusion
     @JsonProperty
     private String name;
     @JsonProperty
-    private String method_used;
-    @JsonProperty
-    private String species;
+    private String url_scrap;
 
     public Fusion() {
     }
 
-    public Fusion(String name, String method_used, String species) {
+    public Fusion(String name, String url_scrap, String species) {
         this.name = name;
-        this.method_used = method_used;
-        this.species = species;
+        this.url_scrap = url_scrap;
     }
 
     public String getName() {
@@ -30,19 +27,11 @@ public class Fusion
     }
 
     public String getMethod_used() {
-        return method_used;
+        return url_scrap;
     }
 
-    public void setMethod_used(String method_used) {
-        this.method_used = method_used;
-    }
-
-    public String getSpecies() {
-        return species;
-    }
-
-    public void setSpecies(String species) {
-        this.species = species;
+    public void setUrl_scrap(String url_scrap) {
+        this.url_scrap = url_scrap;
     }
 
     public String MostrarJson()
