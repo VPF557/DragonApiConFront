@@ -25,7 +25,7 @@ public class VistaListado extends VerticalLayout {
         grid.addColumn(Parametro::getParameter1).setHeader("Parametro 1");
         grid.addColumn(Parametro::getParameter2).setHeader("Parametro 2");
 
-        /*
+
         GridContextMenu<Parametro> menu = grid.addContextMenu();
         menu.setOpenOnClick(true);
         menu.addItem("Delete", event ->
@@ -35,7 +35,7 @@ public class VistaListado extends VerticalLayout {
         grid.setAllRowsVisible(true);
         this.add(grid);
         add(horizontal);
-        */
+
        try {
            listaParams = DataService.getProductos(listaParams);
         } catch (URISyntaxException e) {
