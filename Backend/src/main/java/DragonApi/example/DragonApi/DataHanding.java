@@ -8,6 +8,7 @@ import java.net.URISyntaxException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.ArrayList;
 
 public class DataHanding {
 
@@ -83,6 +84,18 @@ public class DataHanding {
 
 
         return fusion;
+    }
+
+    public ArrayList<Parametro> buscarObjeto(String param1, String ruta) {
+        //En esta funcion se añaden los nuevos elementos enviados desde el front a un ArrayList para posteriormente actualizar la BBDD
+        LeerJson reader = new LeerJson();
+        ArrayList<Parametro> listaAux = reader.LeerFicheroPeticiones(ruta);
+        for (int i = 0; i < listaAux.size(); i++) {
+            if (listaAux.get(i).getParameter1().equals(param1)) {
+                listaAux.remove(i);
+            }
+        }
+        return listaAux;
     }
 
 }
