@@ -12,7 +12,7 @@ import java.net.http.HttpResponse;
 public class DataHanding {
 
     private final static String url = "https://dragonballapi-backend.vercel.app/%s/information/%s";
-
+    //Peticiones 
     public Personaje obtenerPersonaje(Parametro params)
     {
 
