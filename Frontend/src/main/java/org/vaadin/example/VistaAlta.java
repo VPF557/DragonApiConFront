@@ -45,7 +45,7 @@ public class VistaAlta extends VerticalLayout {
             }
         });
 
-        horizontal.add(etiqueta1, texto1, etiqueta2);
+        horizontal.add(etiqueta1, texto1, etiqueta2, texto2);
         this.add(horizontal,boton);
     }
 }

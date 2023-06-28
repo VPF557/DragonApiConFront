@@ -18,15 +18,15 @@ public class VistaListado extends VerticalLayout {
     {
         removeAll();
         HorizontalLayout horizontal= new HorizontalLayout();
-        ArrayList<Parametro> listaTweets = new ArrayList<>();
+        ArrayList<Parametro> listaParams = new ArrayList<>();
         ArrayList<Parametro> listaAux = new ArrayList<>();
 
         Grid<Parametro> grid = new Grid<>(Parametro.class, false);
         grid.addColumn(Parametro::getParameter1).setHeader("Parametro 1");
-        grid.addColumn(Parametro::getParameter1).setHeader("Parametro 2");
+        grid.addColumn(Parametro::getParameter2).setHeader("Parametro 2");
 
-
-        /* GridContextMenu<Parametro> menu = grid.addContextMenu();
+        /*
+        GridContextMenu<Parametro> menu = grid.addContextMenu();
         menu.setOpenOnClick(true);
         menu.addItem("Delete", event ->
         {
@@ -35,15 +35,15 @@ public class VistaListado extends VerticalLayout {
         grid.setAllRowsVisible(true);
         this.add(grid);
         add(horizontal);
-
+        */
        try {
-            listaTweets = DataService.getProductos(listaTweets);
+           listaParams = DataService.getProductos(listaParams);
         } catch (URISyntaxException e) {
             throw new RuntimeException(e);
         }
-        grid.setItems(listaTweets);
+        grid.setItems(listaParams);
 
-        this.add(horizontal,grid); */
+        this.add(horizontal,grid);
     }
 
 }
