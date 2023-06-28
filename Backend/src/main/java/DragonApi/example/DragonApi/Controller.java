@@ -1,9 +1,6 @@
 package DragonApi.example.DragonApi;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
@@ -52,4 +49,14 @@ public class Controller {
         writter.escribirJsonPeticiones(listaPeticiones);
     }
 
+    @DeleteMapping("/Borrar{parameter2}")
+    public ArrayList<Parametro> borrarParam(@RequestParam String parameter2)
+    {
+        ArrayList<Parametro>  lista = data.buscarObjeto(parameter2,"Peticiones.json");
+        EscribirJson escribirJSON = new EscribirJson();
+        writter.escribirJsonPeticiones(lista);
+
+        return lista;
+
+    }
 }
