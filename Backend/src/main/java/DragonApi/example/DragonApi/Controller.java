@@ -13,7 +13,7 @@ public class Controller {
     LeerJson reader = new LeerJson();
     DataHanding data = new DataHanding();
     EscribirJson writter = new EscribirJson();
-/*
+
     @GetMapping("/registro")
     public ArrayList<Parametro> listaObjeto1()
     {
@@ -22,7 +22,7 @@ public class Controller {
         //Mostramos los elementos leidos
         return listaPeticiones;
     }
-*/
+
     @PostMapping("/peticion")
     public void mandarElemento(@RequestBody Parametro objeto1)
     {
