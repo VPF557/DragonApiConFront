@@ -11,7 +11,7 @@ import com.vaadin.flow.component.textfield.TextField;
 import java.util.ArrayList;
 
 public class VistaAlta extends VerticalLayout {
-    ArrayList<Criptomoneda> listaPacientes = new ArrayList<>();
+    ArrayList<Parametro> listaParametros = new ArrayList<>();
     public VistaAlta()
     {
 

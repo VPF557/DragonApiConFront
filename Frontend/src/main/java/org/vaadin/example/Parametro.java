@@ -13,6 +13,11 @@ public class Parametro
     public Parametro() {
     }
 
+    public Parametro(String parameter1, String parameter2) {
+        this.parameter1 = parameter1;
+        this.parameter2 = parameter2;
+    }
+
     public String getParameter1() {
         return parameter1;
     }
