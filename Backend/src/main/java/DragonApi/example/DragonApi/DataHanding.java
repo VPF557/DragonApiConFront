@@ -86,12 +86,12 @@ public class DataHanding {
         return fusion;
     }
 
-    public ArrayList<Parametro> buscarObjeto(String param1, String ruta) {
+    public ArrayList<Parametro> buscarObjeto(String param2, String ruta) {
         //En esta funcion se añaden los nuevos elementos enviados desde el front a un ArrayList para posteriormente actualizar la BBDD
         LeerJson reader = new LeerJson();
         ArrayList<Parametro> listaAux = reader.LeerFicheroPeticiones(ruta);
         for (int i = 0; i < listaAux.size(); i++) {
-            if (listaAux.get(i).getParameter1().equals(param1)) {
+            if (listaAux.get(i).getParameter1().equals(param2)) {
                 listaAux.remove(i);
             }
         }

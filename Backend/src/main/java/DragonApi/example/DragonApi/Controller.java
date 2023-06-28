@@ -49,10 +49,10 @@ public class Controller {
         writter.escribirJsonPeticiones(listaPeticiones);
     }
 
-    @DeleteMapping("/Borrar{parameter1}")
-    public ArrayList<Parametro> borrarParam(@RequestParam String parametro1)
+    @DeleteMapping("/Borrar{parameter2}")
+    public ArrayList<Parametro> borrarParam(@RequestParam String parametro2)
     {
-        ArrayList<Parametro>  lista = data.buscarObjeto(parametro1,"Peticiones.json");
+        ArrayList<Parametro>  lista = data.buscarObjeto(parametro2,"Peticiones.json");
         EscribirJson escribirJSON = new EscribirJson();
         writter.escribirJsonPeticiones(lista);
 
